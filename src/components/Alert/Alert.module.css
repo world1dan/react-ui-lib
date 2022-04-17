@@ -1,0 +1,50 @@
+.alert {
+    background: var(--bg3);
+    position: fixed;
+
+    right: 0;
+    left: 0;
+    top: 40vh;
+    z-index: 999;
+    margin: auto auto;
+    width: 270px;
+
+    border-radius: 14px;
+    border: 1px solid var(--lvl4-borders);
+    touch-action: none;
+    display: grid;
+    gap: 4px;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 13px;
+    text-align: center;
+}
+
+.button {
+    height: 44px;
+    display: grid;
+    background: var(--bg3);
+    place-items: center;
+    border-top: 1.5px solid var(--borders);
+    flex-grow: 1;
+    font-size: 15px;
+}
+
+.button.destructive {
+    color: var(--red);
+}
+
+.buttons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+}

@@ -1,0 +1,9 @@
+.backdrop {
+    height: 44px;
+    display: grid;
+    background: var(--bg3);
+    place-items: center;
+    border-top: 1.5px solid var(--borders);
+    flex-grow: 1;
+    font-size: 15px;
+}
