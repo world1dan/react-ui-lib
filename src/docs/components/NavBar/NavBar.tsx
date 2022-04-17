@@ -2,8 +2,12 @@ import React from 'react'
 
 import css from './style.module.scss'
 
-const NavBar = () => {
-    return <div className={css.nav_bar}>NavBar</div>
+export interface NavBarProps {
+    children: React.ReactNode
+}
+
+const NavBar = ({ children }: NavBarProps) => {
+    return <div className={css.nav_bar}>{children}</div>
 }
 
 export default NavBar

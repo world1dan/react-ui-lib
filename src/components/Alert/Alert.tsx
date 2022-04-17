@@ -1,4 +1,4 @@
-import css from './Alert.module.css'
+import css from './Alert.module.scss'
 import React from 'react'
 import Backdrop from '../Backdrop/Backdrop'
 import Button, { IButtonTypes } from './Button'
@@ -44,7 +44,9 @@ const Alert = (props: IAlertProps) => {
                 <div className={css.title}>{props.title}</div>
                 <div className={css.description}>{props.description}</div>
                 <div className={css.buttons}>
-                    <Button onClick={props.handleClose}>{props.closeButtonText}</Button>
+                    <Button onClick={props.handleClose} type={IButtonTypes.Primary}>
+                        {props.closeButtonText}
+                    </Button>
 
                     {props.type == 'destructive' && (
                         <Button

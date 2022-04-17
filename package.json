@@ -4,6 +4,10 @@
     "author": "world1dan",
     "license": "MIT",
     "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/world1dan/react-ui-lib.git"
+    },
     "scripts": {
         "start": "webpack-dev-server --mode development",
         "build": "rollup -c -w"
@@ -11,7 +15,7 @@
     "dependencies": {
         "@babel/preset-typescript": "^7.16.7",
         "css-loader": "^6.7.1",
-        "framer-motion": "4.1.17",
+        "framer-motion": "^6.3.0",
         "html-webpack-plugin": "^5.5.0",
         "mini-css-extract-plugin": "^2.6.0",
         "react": "^18.0.0",

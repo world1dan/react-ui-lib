@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion'
+
+/*
 import { styled } from '@linaria/react'
 const Styles = styled.button`
     height: 44px;
@@ -9,7 +11,7 @@ const Styles = styled.button`
     flex-grow: 1;
     font-size: 15px;
 `
-
+*/
 export enum IButtonTypes {
     Primary = 'primary',
     Destructive = 'destructive',
@@ -23,7 +25,7 @@ export interface IButtonProps {
 
 const Button = (props: IButtonProps) => {
     return (
-        <Styles
+        <div
             onClick={props.onClick}
             transition={{
                 duration: 0.2,
@@ -36,7 +38,7 @@ const Button = (props: IButtonProps) => {
             }}
         >
             {props.children}
-        </Styles>
+        </div>
     )
 }
 
