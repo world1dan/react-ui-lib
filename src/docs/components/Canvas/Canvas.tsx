@@ -14,5 +14,4 @@ const Canvas = ({ render }: CanvasProps) => {
         </div>
     )
 }
-
 export default Canvas

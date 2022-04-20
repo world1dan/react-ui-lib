@@ -1,0 +1,29 @@
+.alert_button {
+    height: 46px;
+    display: grid;
+    background: var(--bg3);
+    place-items: center;
+    border-top: 1px solid var(--borders);
+
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--blue);
+    width: 100%;
+    border-right: 1px solid var(--borders);
+}
+
+.alert_button:last-of-type {
+    border-right: none;
+}
+
+.alert_button.cancel {
+    font-weight: 600;
+}
+.alert_button.destructive {
+    color: var(--red);
+}
+
+.alert_button.large {
+    flex-grow: 1;
+    border-right: none !important;
+}

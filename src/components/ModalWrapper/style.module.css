@@ -1,0 +1,15 @@
+.modal_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    pointer-events: none;
+}
+
+.modal {
+    pointer-events: all;
+    z-index: 999;
+}

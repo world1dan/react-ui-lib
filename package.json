@@ -10,32 +10,42 @@
     },
     "scripts": {
         "start": "webpack-dev-server --mode development",
-        "build": "rollup -c -w"
-    },
-    "dependencies": {
-        "@babel/preset-typescript": "^7.16.7",
-        "css-loader": "^6.7.1",
-        "framer-motion": "^6.3.0",
-        "html-webpack-plugin": "^5.5.0",
-        "mini-css-extract-plugin": "^2.6.0",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "react-router": "^6.3.0",
-        "react-router-dom": "^6.3.0",
-        "sass-loader": "^12.6.0",
-        "webpack": "^5.72.0",
-        "webpack-dev-server": "^4.8.1"
+        "build": "rollup -c -w",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
     },
     "files": [
         "dist"
     ],
+    "peerDependencies": {
+        "framer-motion": "^6.3.0",
+        "react": "^18.0.0"
+    },
     "typings": "dist/index",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "devDependencies": {
+        "react-router": "^6.3.0",
+        "sass-loader": "^12.6.0",
+        "webpack": "^5.72.0",
+        "webpack-dev-server": "^4.8.1",
+        "react-router-dom": "^6.3.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.0",
+        "postcss": "^8.4.12",
+        "css-loader": "^6.7.1",
+        "@babel/preset-typescript": "^7.16.7",
         "@babel/core": "^7.17.9",
         "@babel/preset-react": "^7.16.7",
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+        "@storybook/addon-actions": "^6.4.22",
+        "@storybook/addon-essentials": "^6.4.22",
+        "@storybook/addon-interactions": "^6.4.22",
+        "@storybook/addon-links": "^6.4.22",
+        "@storybook/addon-postcss": "^2.0.0",
+        "@storybook/preset-scss": "^1.0.3",
+        "@storybook/react": "^6.4.22",
+        "@storybook/testing-library": "^0.0.9",
         "@types/react": "^18.0.5",
         "@types/react-dom": "^18.0.1",
         "babel-loader": "^8.2.4",
@@ -51,6 +61,8 @@
         "rollup-plugin-serve": "^1.1.0",
         "rollup-plugin-typescript2": "^0.31.2",
         "sass": "^1.50.0",
+        "storybook-css-modules-preset": "^1.1.1",
+        "style-loader": "^3.3.1",
         "typescript": "^4.6.3",
         "webpack-cli": "^4.9.2"
     }

@@ -1,64 +1,50 @@
-import css from './Alert.module.scss'
+import css from './Alert.module.css'
 import React from 'react'
 import Backdrop from '../Backdrop/Backdrop'
-import Button, { IButtonTypes } from './Button'
-import { motion } from 'framer-motion'
 
-export enum AlertTypes {
-    Info = 'info',
-    Destructive = 'destructive',
-}
+import { AnimatePresence, motion } from 'framer-motion'
+import ModalWrapper from '../ModalWrapper/ModalWrapper'
 
 export interface IAlertProps {
     children?: React.ReactNode
     handleClose: () => void
     title: string
-    description: string
-    type: AlertTypes
-    closeButtonText: string
-    destructiveButtonText?: string
+    caption: string
+    show: Boolean
 }
 
 const Alert = (props: IAlertProps) => {
     return (
-        <Backdrop onClick={props.handleClose}>
-            <motion.div
-                className={css.alert}
-                transition={{
-                    duration: 0.1,
-                }}
-                initial={{
-                    opacity: 0.5,
-                    scale: 0.96,
-                }}
-                animate={{
-                    opacity: 1,
-                    scale: 1,
-                }}
-                exit={{
-                    opacity: 0,
-                    scale: 0.96,
-                }}
-            >
-                {props.children}
-                <div className={css.title}>{props.title}</div>
-                <div className={css.description}>{props.description}</div>
-                <div className={css.buttons}>
-                    <Button onClick={props.handleClose} type={IButtonTypes.Primary}>
-                        {props.closeButtonText}
-                    </Button>
-
-                    {props.type == 'destructive' && (
-                        <Button
-                            onClick={props.handleClose}
-                            type={IButtonTypes.Destructive}
+        <AnimatePresence>
+            {props.show && (
+                <Backdrop onClick={props.handleClose}>
+                    <ModalWrapper>
+                        <motion.div
+                            className={css.alert}
+                            transition={{
+                                duration: 0.12,
+                            }}
+                            initial={{
+                                opacity: 0.5,
+                                scale: 1.05,
+                            }}
+                            animate={{
+                                opacity: 1,
+                                scale: 1,
+                            }}
+                            exit={{
+                                opacity: 0,
+                                scale: 0.96,
+                            }}
                         >
-                            {props.destructiveButtonText}
-                        </Button>
-                    )}
-                </div>
-            </motion.div>
-        </Backdrop>
+                            <div className={css.title}>{props.title}</div>
+                            <div className={css.caption}>{props.caption}</div>
+                            <div className={css.buttons}>{props.children}</div>
+                        </motion.div>
+                    </ModalWrapper>
+                </Backdrop>
+            )}
+        </AnimatePresence>
     )
 }
 

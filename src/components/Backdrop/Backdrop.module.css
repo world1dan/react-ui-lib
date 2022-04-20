@@ -1,9 +1,14 @@
 .backdrop {
-    height: 44px;
+    height: 100vh;
     display: grid;
-    background: var(--bg3);
+    backdrop-filter: brightness(0.6);
     place-items: center;
     border-top: 1.5px solid var(--borders);
     flex-grow: 1;
     font-size: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

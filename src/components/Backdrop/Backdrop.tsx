@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion, MotionValue, useTransform } from 'framer-motion'
-import css from './Backdrop.module.scss'
-
+import css from './Backdrop.module.css'
 
 interface IBackdropProps {
     children: React.ReactNode

@@ -1,0 +1,30 @@
+.alert {
+    background: var(--bg3);
+    width: 270px;
+    border-radius: 14px;
+    border: 1px solid var(--lvl4-borders);
+    touch-action: none;
+    display: grid;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.caption {
+    font-size: 12px;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
